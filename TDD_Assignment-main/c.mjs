@@ -55,6 +55,14 @@ tests.isEqual(
   "For n = 20, the function should return 6765"
 );
 
+//Invalid inputs
+
+tests.isEqual(sequence("3"), null, "String output should return null");
+tests.isEqual(sequence(undefined), null, "Undefined input should return null");
+tests.isEqual(sequence([]), null, "An array input should return null");
+tests.isEqual(sequence(null), null, "Null input should return null");
+tests.isEqual(sequence(false), null, "Boolean input should return null");
+
 // Edge cases
 tests.isEqual(sequence(-1), null, "Negative input should return null");
 tests.isEqual(sequence(1.5), null, "Non-integer input should return null");
